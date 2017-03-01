@@ -17,38 +17,38 @@ const flavours = ['Chocolate Chip', 'Kulfi', 'Caramel Praline', 'Chocolate', 'Bu
 
 const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
 
-// // Array.prototype.filter()
-// // 1. Filter the list of inventors for those who were born in the 1500's
-// const filtered = inventors.filter(inv => String(inv.year).slice(0, 2) === '15');
-// console.table(filtered);
+// Array.prototype.filter()
+// 1. Filter the list of inventors for those who were born in the 1500's
+const filtered = inventors.filter(inv => String(inv.year).slice(0, 2) === '15');
+console.table(filtered);
 
-// // Array.prototype.map()
-// // 2. Give us an array of the inventory first and last names
-// const mapped = inventors.map(inv => inv.first + ' ' + inv.last);
-// console.table(mapped);
+// Array.prototype.map()
+// 2. Give us an array of the inventory first and last names
+const mapped = inventors.map(inv => inv.first + ' ' + inv.last);
+console.table(mapped);
 
-// // Array.prototype.sort()
-// // 3. Sort the inventors by birthdate, oldest to youngest
-// const sorted = inventors.sort((a, b) => a.year > b.year);
-// console.table(sorted);
+// Array.prototype.sort()
+// 3. Sort the inventors by birthdate, oldest to youngest
+const sorted = inventors.sort((a, b) => a.year > b.year);
+console.table(sorted);
 
-// // Array.prototype.reduce()
-// // 4. How many years did all the inventors live?
-// const reduced = inventors.reduce((a, b) => a + b.passed - b.year, 0);
-// console.table(reduced);
+// Array.prototype.reduce()
+// 4. How many years did all the inventors live?
+const reduced = inventors.reduce((a, b) => a + b.passed - b.year, 0);
+console.table(reduced);
 
-// // 5. Sort the inventors by years lived
-// const sortedB = inventors.sort((a, b) => a.passed - a.year > b.passed - b.year);
-// console.table(sortedB);
+// 5. Sort the inventors by years lived
+const sortedB = inventors.sort((a, b) => a.passed - a.year > b.passed - b.year);
+console.table(sortedB);
 
-// // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
-// // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-// let category = document.querySelector('.mw-category');
-// let links = Array.from(category.querySelectorAll('a'));
-// let streets = links.map(el => el.innerText);
-// let rg = new RegExp(/de/gi);
-// let deStreets = streets.filter(str => rg.test(str));
-// console.table(deStreets);
+// 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+// https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+let category = document.querySelector('.mw-category');
+let links = Array.from(category.querySelectorAll('a'));
+let streets = links.map(el => el.innerText);
+let rg = new RegExp(/de/gi);
+let deStreets = streets.filter(str => rg.test(str));
+console.table(deStreets);
 
 
 // 7. sort Exercise
